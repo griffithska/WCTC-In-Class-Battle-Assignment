@@ -13,6 +13,10 @@ namespace Battle
             fighter.Armor.Defense = 10;
             fighter.Weapon.Power = 10;
 
+            ICombatant horse = new Mount();
+            horse.Armor.Defense = 5;
+            horse.Weapon.Power = 0;
+
             // Create Enemy (instantiate object)
             // Equip Armor (assign values)
             // Equip Weapon (assign values)
@@ -22,15 +26,8 @@ namespace Battle
 
             // Attack Enemy (execute method)
             fighter.Attack(enemy);
-
-            IMonster monster = null;
-            monster.Roar();
-
-            //IRepository repos = new JsonRepository();
+            horse.Attack(enemy);
             
-            // all i care about is that I retrieved a movie
-            // from where?  who cares!
-            //var movie = repos.Get(1);
         }
     }
 }
